@@ -66,7 +66,7 @@ function pages() {
   return gulp.src(UNCSS_OPTIONS.html)
     // .pipe($.data(UNCSS_OPTIONS.data))
     .pipe($.data(() => {
-        return JSON.parse(fs.readFileSync('src/templates/data/data.json'))
+      return JSON.parse(fs.readFileSync('src/templates/data/data.json'))
     }))
     .pipe($.pug({
       pretty: true
@@ -101,7 +101,7 @@ function sass() {
       browsers: COMPATIBILITY
     }))
     // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    // .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))

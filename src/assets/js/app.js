@@ -12,7 +12,7 @@
 // $(document).foundation();
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 01, 2017 17:34:00 GMT+4").getTime();
+var countDownDate = new Date("Aug 01, 2017 13:00:00 GMT+4").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -38,13 +38,13 @@ var x = setInterval(function() {
 
 	if (days < 5) {
 		document.getElementById("days").nextSibling.innerHTML = 'Дня';
-	} if (days == 1) {
+	} if (days < 2) {
 		document.getElementById("days").nextSibling.innerHTML = 'Днь';
-	};
+	}
 
-	if (hours == 1) {
+	if (hours < 5) {
 		document.getElementById("hours").nextSibling.innerHTML = 'Час';
-	} if (hours < 5) {
+	} if (hours < 1) {
 		document.getElementById("hours").nextSibling.innerHTML = 'Часа';
 	} if (hours >= 5) {
 		document.getElementById("hours").nextSibling.innerHTML = 'Часов';
@@ -52,36 +52,38 @@ var x = setInterval(function() {
 		document.getElementById("hours").nextSibling.innerHTML = 'Час';
 	} if (hours > 21) {
 		document.getElementById("hours").nextSibling.innerHTML = 'Часа';
-	};
+	}
 
-	if (minutes == 1) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
-	} if (minutes < 5) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
-	} if (minutes >= 5) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
-	} if (minutes == 21) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
-	} if (minutes > 21) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
-	} if (minutes >= 25) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
-	} if (minutes == 31) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
-	} if (minutes > 31) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
-	} if (minutes >= 35) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
-	} if (minutes == 41) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
-	} if (minutes > 41) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
-	} if (minutes >= 45) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
-	} if (minutes == 51) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
-	} if (minutes > 51) {
-		document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
-	};
+	// if (minutes == 1) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
+	// } if (minutes < 5) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
+	// } if (minutes >= 5) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
+	// } if (minutes == 21) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
+	// } if (minutes > 21) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
+	// } if (minutes >= 25) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
+	// } if (minutes == 31) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
+	// } if (minutes > 31) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
+	// } if (minutes >= 35) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
+	// } if (minutes == 41) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
+	// } if (minutes > 41) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
+	// } if (minutes >= 45) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
+	// } if (minutes == 51) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минута';
+	// } if (minutes < 51) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минуты';
+	// } if (minutes >= 55) {
+	// 	document.getElementById("minutes").nextSibling.innerHTML = 'Минут';
+	// }
 
 }, 1000);
