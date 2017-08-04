@@ -1,29 +1,30 @@
 extends layouts/default
 
+//- Ссылки на все возможные варианты favicon's
 block favicons
 	include partials/favicons
 
-block content
+block body
 
-	main.main-content.align-middle
-		img.main-content__logo(src="assets/img/logo_honeyKid.svg")
-		h1.main-content__header.
-			Открытие сайта<br> 
-			мастерской детского<br> 
-			текстиля #[strong «Honey kid»]
-		span.main-content__sub-header #[strong 1 Августа 2017]
-		span.main-content__sub-header Осталось:
+	//- Класс ".hp" это home-page - домашняя страница
+	body.hp
 
-		.main-content__timer.timer
+		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
+		.hp__g-wrapper.g-wrapper
 
-			.timer__item
-				span.timer__num#days 
-				span.timer__text Дней
+			//- Для главной страницы используется основной sidebar
+			block sidebar
+				aside.hp__sb.sb-column
+					include partials/sidebar-main
 
-			.timer__item
-				span.timer__num#hours 
-				span.timer__text Часов
+			//- Для главной страницы используется основной sidebar
+			block content
 
-			.timer__item
-				span.timer__num#minutes 
-				span.timer__text Минут
+				.hp__m-column.m-column
+
+					nav.hp__nav.nav
+						include partials/navigation
+
+					header.hp__header.header
+
+			block footer

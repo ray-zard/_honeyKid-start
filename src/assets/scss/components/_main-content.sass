@@ -1,8 +1,12 @@
-$main-color: #faeade
+$main-color: #c2dcf3
+
+$bg-size: 500px
 
 body
-	background: url(../img/honeyKid_bg.png)
-	background-position-y: 800px
+	background-color: $main-color
+	background-image: url(../img/bg_pattern.png)
+	background-size: $bg-size $bg-size
+	background-position-x: calc(#{$bg-size}/2)
 	animation-name: "bgmove"
 	animation-duration: 30s
 	animation-iteration-count: infinite
@@ -12,66 +16,7 @@ body
 		0% 
 			background-position-y: 0px
 		100%
-			background-position-y: 800px
+			background-position-y: $bg-size
 
-.main-content
-	@include xy-grid-container
-	@include xy-grid(vertical, false)
-	height: 100vh
-	justify-content: center;
-
-	&__logo
-		max-width: 17rem
-		margin-bottom: 2rem
-
-		@media screen and (max-width: 640px)
-			max-width: 12rem
-			margin-bottom: 1.6rem
-
-	&__header, &__sub-header
-		font-size: 2.2rem
-		text-align: center
-		line-height: 1.2
-		display: block
-		margin-bottom: 2rem
-		color: $main-color
-
-		@media screen and (max-width: 640px)
-			font-size: 1.8rem
-			margin-bottom: 1.2rem
-
-	&__timer
-		max-width: 24rem
-
-.timer
-	@include xy-grid(horizontal, true)
-	
-	&__item
-		@include xy-cell(1 of 3)
-		@include xy-grid
-		justify-content: center
-
-	&__num, &__text
-		@include xy-cell(1 of 1)
-		@include xy-grid-collapse
-		text-align: center
-		color: $main-color
-
-	&__num
-		font-size: 3rem
-		font-weight: bold
-		line-height: 1.2
-
-		@media screen and (max-width: 640px)
-			font-size: 2.2rem
-
-	&__text
-		font-size: 1.6rem
-
-		@media screen and (max-width: 640px)
-			font-size: 1.2rem
-
-
-
-
-		
+.g-wrapper
+	@include xy-grid-container();
