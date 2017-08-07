@@ -9,8 +9,8 @@ COMPATIBILITY:
 
 # UnCSS will use these settings
 UNCSS_OPTIONS:
-  data:
-    - "src/templates/**/*.json"
+  json:
+    - "src/templates/data/*.json"
   html:
     - "src/templates/**/*.pug"
   ignore:

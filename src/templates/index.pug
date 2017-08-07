@@ -8,27 +8,23 @@ block body
 
 	//- Класс ".hp" это home-page - домашняя страница
 	body.hp
-
 		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
 		.hp__grid.g-grid
-
 			//- Для главной страницы используется основной sidebar
 			block sidebar
 				aside.hp__sb.sb-column
-
 					a(href="index.html").hp__logo.m__logo
 						img(src=logo.src)
-						
 					include partials/sidebar-main
 
 			//- Для главной страницы используется основной sidebar
 			block content
-
 				.hp__m-column.m-column
-
 					nav.hp__nav.nav
-						include partials/navigation
-
+						.nav__wrap.style-elem
+							include partials/navigation
+						.nav__wrap.style-elem
+							include partials/cart
 					header.hp__header.header
 
 			block footer

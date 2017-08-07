@@ -1,13 +1,16 @@
-.navigation.columns
-	.navigations__logo
-		h1 Логотип
-	nav
-		ul
-			li 
-				a(href="#") item 1
-			li 
-				a(href="#") item 2
-			li 
-				a(href="#") item 23
-			li 
-				a(href="#") item 13
+ul.nav__list
+	each items in navList
+		li.nav__item
+			a(href=items.href)= items.name
+
+ul.nav__soc-net
+	small.nav__small-text Мы в сообществах:
+	li.nav__item
+		a(href="#")
+			i(class="fa fa-vk" aria-hidden="true")
+	li.nav__item
+		a(href="#")
+			i(class="fa fa-instagram" aria-hidden="true")
+	li.nav__item
+		a(href="#")
+			i(class="fa fa-pinterest" aria-hidden="true")
