@@ -1,18 +1,44 @@
 {
-	"data": {
-		"name": "Matvey",
-		"dirname": "Edomin"
+	"logo": {
+		"src": "assets/img/logo_honey_kid.png",
+		"alt": "Логотип Honey kid"
 	},
-
-	"mainSidebar": {
-		"item1": "Мягкие бортики",
-		"item2": "Балдахины",
-		"item3": "Одеяла",
-		"item4": "Пледы",
-		"item5": "Коконы",
-		"item6": "Конверты",
-		"item7": "Комплекты",
-		"item8": "Мягкие игрушки",
-		"item9": "Декор для детской"
+	"mainList": {
+		"item1": {
+			"name": "Мягкие бортики",
+			"url": "#"
+		},
+		"item2": {
+			"name": "Балдахины",
+			"url": "#"
+		},
+		"item3": {
+			"name": "Одеяла",
+			"url": "#"
+		},
+		"item4": {
+			"name": "Пледы",
+			"url": "#"
+		},
+		"item5": {
+			"name": "Коконы",
+			"url": "#"
+		},
+		"item6": {
+			"name": "Конверты",
+			"url": "#"
+		},
+		"item7": {
+			"name": "Игрушки",
+			"url": "#"
+		},
+		"item8": {
+			"name": "Декор",
+			"url": "#"
+		},
+		"item9": {
+			"name": "Комплекты",
+			"url": "#"
+		}
 	}
 }

@@ -165,7 +165,9 @@ function watch() {
   gulp.watch(PATHS.assets, copy);
 
   gulp.watch('src/templates/**/*.pug').on('all', gulp.series(pages, browser.reload));
-  gulp.watch('src/{layouts,partials}/**/*.pug').on('all', gulp.series(resetPages, pages, browser.reload));
+  // gulp.watch('src/{layouts,partials}/*.pug').on('all', gulp.series(resetPages, pages, browser.reload));
+
+  gulp.watch('src/templates/**/*.json').on('all', gulp.series(pages, browser.reload));
 
   gulp.watch('src/assets/scss/**/*.{sass,scss}').on('all', sass);
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));

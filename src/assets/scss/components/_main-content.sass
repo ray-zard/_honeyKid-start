@@ -18,5 +18,9 @@ body
 		100%
 			background-position-y: $bg-size
 
-.g-wrapper
+.g-grid
 	@include xy-grid-container();
+	@include xy-grid;
+
+.m-column
+	@include xy-cell(10 of 12);
