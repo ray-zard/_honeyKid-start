@@ -13,9 +13,10 @@ block body
 			//- Для главной страницы используется основной sidebar
 			block sidebar
 				aside.hp__sb.sb-column
-					a(href="index.html").hp__logo.m__logo
+					a(href="index.html").hp__logo.logo
 						img(src=logo.src)
-					include partials/sidebar-main
+					.wrap.style-elem
+						include partials/sidebar-main
 
 			//- Для главной страницы используется основной sidebar
 			block content
@@ -23,9 +24,10 @@ block body
 					nav.hp__nav.nav
 						.nav__wrap.style-elem
 							include partials/navigation
-						.nav__wrap.style-elem
+						.style-elem
 							include partials/cart
 					header.hp__header.header
+							include partials/header
 
 			block footer
 				.hp__m-footer.m-footer

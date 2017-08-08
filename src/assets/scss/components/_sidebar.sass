@@ -1,2 +1,18 @@
 .sb-column
 	@include xy-cell(2 of 12);
+
+.sidebar
+	&__list
+	&__item
+		height: 60px
+	&__button
+		@include xy-grid
+		justify-content: space-between
+		align-items: center
+		height: 100%
+		padding: 0 1rem
+	&__text
+		color: $main-gray
+	&__shevron
+		color: $main-medium-gray
+

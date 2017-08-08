@@ -1,4 +1,6 @@
-ul.sidebar__list
+ul.sidebar__list.list.style-elem__active
 	each items in mainList
-		li.sidebar__item
-			a(href=items.url)= items.name
+		li.sidebar__item.list__item
+			a(href=items.url).sidebar__button
+				span.sidebar__text= items.name
+				i(aria-hidden="true").sidebar__shevron.fa.fa-angle-right
