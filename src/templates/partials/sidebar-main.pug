@@ -7,15 +7,24 @@ ul.sidebar__list.list.style-elem__active
 
 			ul.sidebar__sub-list.sub-list.stule-sub-elem
 			
-				if items.subList.headerName
-					h6.sub-list__header= items.subList.headerName
-					each subitems in items.subList.subItems
-						li.sub-list__item 
-							a(href="#")
-								span= subitems.name
+				each sub in items.subList
+				
+					if sub.headerName
+						h6.sub-list__header= sub.headerName
+						each subitems in sub.subItems
+							li.sub-list__item 
+								a(href="#")
+									span= subitems.name
+					
+					else
+						each subitems in sub.subItems
+							li.sub-list__item 
+								a(href="#")
+									span= subitems.name
+
 			
-				else
-					each subitems in items.subList.subItems
-						li.sub-list__item 
-							a(href="#")
-								span= subitems.name
+				//- else
+				//- 	each subitems in items.subList.subItems
+				//- 		li.sub-list__item 
+				//- 			a(href="#")
+				//- 				span= subitems.name
