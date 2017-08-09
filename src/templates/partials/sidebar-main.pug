@@ -4,3 +4,18 @@ ul.sidebar__list.list.style-elem__active
 			a(href=items.url).sidebar__button
 				span.sidebar__text= items.name
 				i(aria-hidden="true").sidebar__shevron.fa.fa-angle-right
+
+			ul.sidebar__sub-list.sub-list.stule-sub-elem
+			
+				if items.subList.headerName
+					h6.sub-list__header= items.subList.headerName
+					each subitems in items.subList.subItems
+						li.sub-list__item 
+							a(href="#")
+								span= subitems.name
+			
+				else
+					each subitems in items.subList.subItems
+						li.sub-list__item 
+							a(href="#")
+								span= subitems.name

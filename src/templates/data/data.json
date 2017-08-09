@@ -3,44 +3,41 @@
 		"src": "assets/img/logo_honey_kid.png",
 		"alt": "Логотип Honey kid"
 	},
-	"mainList": {
-		"item1": {
+	"mainList": [
+		{
 			"name": "Мягкие бортики",
-			"url": "#"
+			"url": "#",
+			"subList": {
+				"subItems": [
+					{
+						"name": "Элемент 1",
+						"url": "#"
+					},
+					{
+						"name": "Элемент 3",
+						"url": "#"
+					}
+				]
+			}
 		},
-		"item2": {
+		{
 			"name": "Балдахины",
-			"url": "#"
-		},
-		"item3": {
-			"name": "Одеяла",
-			"url": "#"
-		},
-		"item4": {
-			"name": "Пледы",
-			"url": "#"
-		},
-		"item5": {
-			"name": "Коконы",
-			"url": "#"
-		},
-		"item6": {
-			"name": "Конверты",
-			"url": "#"
-		},
-		"item7": {
-			"name": "Игрушки",
-			"url": "#"
-		},
-		"item8": {
-			"name": "Декор",
-			"url": "#"
-		},
-		"item9": {
-			"name": "Комплекты",
-			"url": "#"
+			"url": "#",
+			"subList": {
+				"headerName": "Хрень 2",
+				"subItems": [
+					{
+						"name": "Элемент 2",
+						"url": "#"
+					},
+					{
+						"name": "Элемент 4",
+						"url": "#"
+					}
+				]
+			}
 		}
-	},
+	],
 	"navList": {
 		"item1": {
 			"name": "Каталог",
