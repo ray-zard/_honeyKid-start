@@ -2,28 +2,29 @@
 	@include xy-cell(2 of 12);
 
 .sidebar
+	position: relative
+	z-index: 100
 	&__list
 	&__item
-		position: relative
 		height: 60px
 		&:first-child
 			transition: background-color .2s ease-out
 			border-top-left-radius: 12px
 			border-top-right-radius: 12px
-			&:hover
-				border-top-right-radius: 0
 		&:last-child
 			border-bottom-left-radius: 12px
 			border-bottom-right-radius: 12px
 			.sidebar__button::after
 				display: none
-			&:hover
-				border-bottom-right-radius: 0
 		&:hover
 			box-shadow: 0px 0px 10px 0px rgba(57,90,119,0.25);
 			transition: .2s ease-in
 			background-color: $main-color
 			transition: background-color .2s ease-in
+			.sidebar__button
+				color: $white
+				transition: .2s ease-in
+
 	&__button
 		@include xy-grid
 		position: relative
@@ -37,22 +38,15 @@
 			position: absolute
 			content: ""
 			@include horizontal-center;
-			bottom: -1px
-			height: 2px
+			bottom: 0
+			height: 1px
 			width: calc(100% - 1rem)
 			background-color: $main-light-gray
 		&:hover
-			transition: .2s ease-in
-			color: $white
 			&::after
 				display: none
 
 	&__text
 	&__shevron
 		color: $main-medium-gray
-
-.sub-list
-	position: absolute
-	top: 0
-	right: -50%
-	// transform: translateX(-100%);
+	&__sublist

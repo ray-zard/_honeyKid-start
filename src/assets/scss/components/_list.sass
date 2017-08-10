@@ -1,5 +1,30 @@
-.list
+.list, .sub-list
 	margin: 0
 	padding: 0
 	&__item
 		list-style-type: none
+
+.list
+	&__item
+		&:hover .sub-list
+			display: block
+
+.sub-list
+	position: absolute
+	top: 0
+	left: 12px
+	width: 200px
+	height: 540px
+	padding: 1rem
+	padding-left: calc(1rem + 12px)
+	list-style-type: none
+	transition: left .3s ease-out
+	visibility: hidden
+	// transform: translateX(-100%);
+	&__header, &__button
+		color: $white
+
+	.list__item:hover &
+		left: calc(100% - 12px)
+		transition: left .3s ease-in
+		visibility: visible

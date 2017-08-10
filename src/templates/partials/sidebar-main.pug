@@ -1,4 +1,4 @@
-ul.sidebar__list.list.style-elem__active
+ul.sidebar__list.list.style-elem
 	each items in mainList
 		li.sidebar__item.list__item
 			a(href=items.url).sidebar__button
@@ -13,13 +13,13 @@ ul.sidebar__list.list.style-elem__active
 						h6.sub-list__header= sub.headerName
 						each subitems in sub.subItems
 							li.sub-list__item 
-								a(href="#")
+								a(href="#").sub-list__button
 									span= subitems.name
 					
 					else
 						each subitems in sub.subItems
 							li.sub-list__item 
-								a(href="#")
+								a(href="#").sub-list__button
 									span= subitems.name
 
 			
