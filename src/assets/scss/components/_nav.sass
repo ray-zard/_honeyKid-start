@@ -3,10 +3,22 @@
 	justify-content: space-between
 
 	&__wrap
-		@include xy-grid(horizontal)
-		justify-content: space-between
 		flex-basis: 100%
 
+	&__wrap, &__wrap-btn
+		@include xy-grid(horizontal)
+		justify-content: space-between
+		align-items: center
 
 	&__list, &__soc-net
 		@include xy-grid(horizontal)
+		align-items: center
+		height: 50px
+
+	&__item
+		a
+	&__btn
+		display: block
+		padding: 0 .7rem
+
+

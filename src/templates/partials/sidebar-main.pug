@@ -5,22 +5,22 @@ ul.sidebar__list.list.style-elem
 				span.sidebar__text= items.name
 				i(aria-hidden="true").sidebar__shevron.fa.fa-angle-right
 
-			ul.sidebar__sub-list.sub-list.stule-sub-elem
-			
+			.style-sub-elem
 				each sub in items.subList
-				
-					if sub.headerName
-						h6.sub-list__header= sub.headerName
-						each subitems in sub.subItems
-							li.sub-list__item 
-								a(href="#").sub-list__button
-									span= subitems.name
+					ul.sidebar__sub-list.sub-list
 					
-					else
-						each subitems in sub.subItems
-							li.sub-list__item 
-								a(href="#").sub-list__button
-									span= subitems.name
+						if sub.headerName
+							h6.sub-list__header= sub.headerName
+							each subitems in sub.subItems
+								li.sub-list__item 
+									a(href="#").sub-list__button
+										span= subitems.name
+						
+						else
+							each subitems in sub.subItems
+								li.sub-list__item 
+									a(href="#").sub-list__button
+										span= subitems.name
 
 			
 				//- else

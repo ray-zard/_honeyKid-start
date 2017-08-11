@@ -4,9 +4,11 @@
 .sidebar
 	position: relative
 	z-index: 100
+
 	&__list
+
 	&__item
-		height: 60px
+		height: 50px
 		&:first-child
 			transition: background-color .2s ease-out
 			border-top-left-radius: 12px
@@ -17,8 +19,6 @@
 			.sidebar__button::after
 				display: none
 		&:hover
-			box-shadow: 0px 0px 10px 0px rgba(57,90,119,0.25);
-			transition: .2s ease-in
 			background-color: $main-color
 			transition: background-color .2s ease-in
 			.sidebar__button
@@ -47,6 +47,28 @@
 				display: none
 
 	&__text
+
 	&__shevron
 		color: $main-medium-gray
+
 	&__sublist
+
+.sub-list
+
+	&__item
+		padding-left: 0.5rem
+
+	&__header, &__button
+		font-size: 18px
+	
+	&__header
+		margin-bottom: 0.2rem
+
+	&__button
+		color: lighten($main-color, 30%)
+		transition: .2s ease-out
+		&:hover
+			color: $white
+			transition: .2s ease-in
+			
+

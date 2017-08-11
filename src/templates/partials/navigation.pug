@@ -1,16 +1,16 @@
 ul.nav__list.list
 	each items in navList
 		li.nav__item.list__item
-			a(href=items.href)= items.name
+			a(href=items.href).nav__btn= items.name
 
 ul.nav__soc-net.list
 	small.nav__small-text Мы в сообществах:
-	li.nav__item.list__item
+	li.list__item
 		a(href="#")
 			i(class="fa fa-vk" aria-hidden="true")
-	li.nav__item.list__item
+	li.list__item
 		a(href="#")
 			i(class="fa fa-instagram" aria-hidden="true")
-	li.nav__item.list__item
+	li.list__item
 		a(href="#")
 			i(class="fa fa-pinterest" aria-hidden="true")
