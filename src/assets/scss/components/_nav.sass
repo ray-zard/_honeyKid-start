@@ -1,9 +1,13 @@
 .nav
 	@include xy-grid(horizontal, false)
 	justify-content: space-between
+	margin-bottom: 1rem
 
 	&__wrap
 		flex-basis: 100%
+
+	&__wrap-btn
+		margin-left: 1rem
 
 	&__wrap, &__wrap-btn
 		@include xy-grid(horizontal)
@@ -16,9 +20,89 @@
 		height: 50px
 
 	&__item
-		a
+		position: relative
+		height: 100%;
+		&::after
+			@include vertical-center;
+			position: absolute
+			content: ""
+			right: 0
+			width: 1px
+			height: calc(100% - 1rem)
+			background-color: $main-light-gray
+
+		&:last-child
+			&::after
+				display: none
+		
+		&:first-child
+			transition: background-color .2s ease-out
+			border-top-left-radius: 12px
+			border-bottom-left-radius: 12px
+		&:hover
+			background-color: $main-color
+			transition: background-color .2s ease-in
+			&::after
+				display: none
+			.nav__btn
+				color: $white
+				transition: .2s ease-in
+
 	&__btn
-		display: block
+		height: 100%
+		display: flex
+		align-items: center
 		padding: 0 .7rem
+		color: $main-gray
+
+	&__small-text
+		color: $main-medium-gray
+		margin-right: .5rem
+
+	&__soc-item
+		display: flex
+		justify-content: center
+		text-align: center
+		border-radius: 8px
+		margin-right: .5rem
+		background-color: $main-medium-gray
+		width: 32px
+		&.vk
+			background-color: #597da3
+		&.insta
+			background: linear-gradient(135deg, #8469a8 0%,#ff907e 100%);
+		&.pin
+			background-color: #be091c
+
+	&__soc-btn
+		color: $white
+		width: 100%
+		transition: .2s ease-out
+		&:hover
+			color: $white
+			opacity: .7
+			transition: .2s ease-in
+		i
+			transform: translatey(1px)
+		
+.cart
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 50px
+	height: 100%
+	font-size: 24px
+	border-radius: 12px
+	transition: background-color .2s ease-out
+
+	&:hover
+		background-color: $main-color
+		transition: background-color .2s ease-in
+		i
+			color: $white
+
+	i
+		transform: translate3d(-1px,-1px,0);
+
 
 
