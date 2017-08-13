@@ -67,42 +67,71 @@
 		margin-right: .5rem
 		background-color: $main-medium-gray
 		width: 32px
+		height: 32px
+		opacity: .7
+		transition: opacity .3s ease-out
 		&.vk
 			background-color: #597da3
 		&.insta
 			background: linear-gradient(135deg, #8469a8 0%,#ff907e 100%);
 		&.pin
 			background-color: #be091c
+		&:hover
+			opacity: 1
+			trasition: opacity .3s ease-in
+
 
 	&__soc-btn
+		display: flex
+		justify-content: center
+		align-items: center
 		color: $white
 		width: 100%
-		transition: .2s ease-out
+		opacity: .7
+		transition: .2s ease-out .1s
 		&:hover
 			color: $white
-			opacity: .7
-			transition: .2s ease-in
+			opacity: 1
+			transition: opacity .2s ease-in .1s
 		i
-			transform: translatey(1px)
+			// transform: translatey(1px)
 		
 .cart
+	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
+	color: $main-color
 	width: 50px
 	height: 100%
 	font-size: 24px
 	border-radius: 12px
-	transition: background-color .2s ease-out
+	transition: background-color .2s ease-out, color .2s ease-out .2s
 
 	&:hover
 		background-color: $main-color
-		transition: background-color .2s ease-in
-		i
-			color: $white
+		color: $white
+		transition: background-color .2s ease-in, color .2s ease-in .2s
 
-	i
+	&__icon
 		transform: translate3d(-1px,-1px,0);
+
+	&__indicator
+		position: absolute
+		display: flex
+		justify-content: center
+		bottom: -6px
+		width: .8rem
+		height: .8rem
+		background-color: $main-color
+		border-radius: 100%
+	
+	&__value
+		position: absolute
+		transform: translateX(-.5px)
+		color: $white
+		font-size: .6rem
+		font-weight: bold
 
 
 

@@ -26,8 +26,13 @@ block body
 							include partials/navigation
 						.nav__wrap-btn.style-elem
 							include partials/cart
-					header.hp__header.header
-							include partials/header
+					header.hp__header.header.style-elem.wrap-block
+						include partials/header
+					.hp__wrap.wrapper
+						form.hp__search.search.style-elem.wrap-elem.wrapper
+							include partials/search
+						button.hp__filter.filter.style-elem.wrap-btn
+							include partials/filter-btn
 
 			block footer
 				.hp__m-footer.m-footer

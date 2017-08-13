@@ -1,0 +1,43 @@
+.search
+	position: relative
+	height: 50px
+	padding: 0 0 0 12px
+
+	&__input
+		border: none
+		border-bottom: 1px solid $main-light-gray
+		padding-left: .3rem
+
+		&::placeholder
+			color: $main-medium-gray
+			transition: opacity .2s ease-out
+
+		&:focus, &:active
+			// padding-left: .3rem
+
+			&::placeholder
+				padding-left: 0
+				opacity: 0
+				transition: opacity .2s ease-in
+
+	&__btn
+		display: flex
+		justify-content: center
+		color: $main-color
+		cursor: pointer
+		width: 50px
+		height: 100%
+
+.filter
+	display: flex
+	justify-content: center
+	color: $main-color
+	cursor: pointer
+	margin-left: 1rem
+	width: 50px
+	transition: background-color .2s ease-out, color .2s ease-out .2s 
+
+	&:hover
+		background-color: $main-color
+		color: $white
+		transition: background-color .2s ease-in, color .2s ease-in .2s 
