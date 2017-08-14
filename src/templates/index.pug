@@ -18,21 +18,30 @@ block body
 					.wrap.sidebar
 						include partials/sidebar-main
 
-			//- Для главной страницы используется основной sidebar
 			block content
-				.hp__m-column.m-column
+				main.hp__m-column.m-column
+					//- Основная навигация
 					nav.hp__nav.nav
 						.nav__wrap.style-elem
 							include partials/navigation
 						.nav__wrap-btn.style-elem
 							include partials/cart
+
+					//- Шапка основной страницы
 					header.hp__header.header.style-elem.wrap-block
 						include partials/header
-					.hp__wrap.wrapper
-						form.hp__search.search.style-elem.wrap-elem.wrapper
+
+					section.hp__wrap.wrapper
+
+						form.hp__search.search.style-elem.wrap-elem
 							include partials/search
+
 						button.hp__filter.filter.style-elem.wrap-btn
 							include partials/filter-btn
+
+					section.hp__block-goods.block-goods.style-elem
+
+						include partials/block-goods
 
 			block footer
 				.hp__m-footer.m-footer

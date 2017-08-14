@@ -1,0 +1,12 @@
+.block-goods
+	@include xy-grid
+	@include xy-grid-layout(4, '.card');
+	padding: .5rem
+
+	&__header
+		@include xy-gutters($gutter-position: left top right bottom)
+		@include xy-cell(12)
+
+		color: $main-color
+		font-size: 1.6rem
+		font-weight: bold

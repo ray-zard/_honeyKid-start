@@ -1,0 +1,55 @@
+.card
+	@include xy-cell(1 of 4)
+	@include xy-gutters($gutter-position: left right)
+
+	position: relative
+	border-radius: 8px;
+	border: 1px solid $main-medium-gray
+	margin-bottom: 1rem
+	height: 450px
+
+	&__content
+		@include xy-grid
+		justify-content: space-between
+		height: 100%
+		padding: .5rem
+
+	&__img
+		object-fit: cover
+		object-position: 50% 50%
+		border-radius: 6px
+		margin-bottom: .5rem
+
+	&__header
+		line-height: 1.2
+		font-size: 1.2rem
+		font-weight: bold
+
+	&__text
+		line-height: 1.2
+		font-size: 16px
+		height: 3rem
+		overflow: hidden
+		margin-bottom: 0
+
+	&__footer
+		@include xy-grid
+		align-content: flex-end
+
+	&__price
+		@include xy-cell()
+		margin-bottom: .5rem
+		
+	&__label
+		border-radius: 6px
+		background-color: $main-medium-gray
+		color: $white
+		line-height: 1.2
+		font-size: 16px
+		font-weight: bold
+		padding: .3rem
+		margin-right: .5rem
+
+
+	&__btn-group
+		position: absolute
