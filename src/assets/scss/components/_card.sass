@@ -4,15 +4,40 @@
 
 	position: relative
 	border-radius: 8px;
-	border: 1px solid $main-medium-gray
+	border: .5px solid $main-light-gray
 	margin-bottom: 1rem
 	height: 450px
+	transition: border .2s ease-out
+
+	&:hover
+		border: 0 solid $main-light-gray
+		transition: border .1s ease-in
+
+	&__wrapper
+		position: relative
+		@include xy-grid
+		padding: .5rem
+		background-color: $white
+		z-index: 1
+		border-radius: 8px;
+
+		.card:hover &
+			box-shadow: 0px 0px 24px 0px rgba(57,90,119,0.25);
+			transition: box-shadow .1s ease-in
+			z-index: 1000
 
 	&__content
-		@include xy-grid
+		position: absolute
 		justify-content: space-between
 		height: 100%
-		padding: .5rem
+		transition: box-shadow .2s ease-out
+
+
+		.card:hover &
+			position: absolute
+			height: auto
+			z-index: 100
+
 
 	&__img
 		object-fit: cover
@@ -21,16 +46,37 @@
 		margin-bottom: .5rem
 
 	&__header
+		color: $main-color
 		line-height: 1.2
 		font-size: 1.2rem
 		font-weight: bold
 
 	&__text
+		position: relative
+		color: $main-gray
 		line-height: 1.2
-		font-size: 16px
-		height: 3rem
+		font-size: 18px
+		max-height: 3rem
 		overflow: hidden
 		margin-bottom: 0
+
+		&::after
+			position: absolute
+			content: ""
+			bottom: 0
+			left: 0
+			right: 0
+			height: 3rem
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 50%,rgba(255,255,255,1) 100%); 
+
+		.card:hover &
+			max-height: 100%
+			margin-bottom: .5rem
+			transition: max-height .5s ease-in
+
+			&::after
+				height: 0
+				transition: .24s ease-in .1s
 
 	&__footer
 		@include xy-grid
@@ -38,6 +84,11 @@
 
 	&__price
 		@include xy-cell()
+
+		color: $main-pigment
+		line-height: 1.2
+		font-size: 1.2rem
+		font-weight: bold
 		margin-bottom: .5rem
 		
 	&__label
@@ -50,6 +101,58 @@
 		padding: .3rem
 		margin-right: .5rem
 
+		&__value
+			background-color: $main-color
 
 	&__btn-group
 		position: absolute
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		flex-wrap: nowrap
+		left: 0
+		right: 0
+		bottom: .5rem
+		width: 100%
+		height: calc(50px + 8px)
+		background-color: $main-color
+		border-radius: 0 0 8px 8px
+		transition: box-shadow .1s ease-in, bottom .2s ease-in
+		z-index: 0
+
+		.card:hover &
+			bottom: -2.5rem
+			box-shadow: 0px 0px 12px 0px rgba(57,90,119,0.25);
+			transition: box-shadow .1s ease-in .1s, bottom .25s ease-in .1s
+
+	&__add
+		width: 100%
+		height: 50px
+		text-align: center
+		font-weight: bold
+		color: $white
+		cursor: pointer
+		transform: scale(1)
+		transition: transform .1s ease-out
+
+		&:hover
+			transform: scale(1.1)
+			transition: .1s ease-in
+
+	&__cart
+		width: 60px
+		height: 100%
+		color: $main-color
+		background-color: $white
+		padding-top: 8px
+		padding-right: 4px
+		border-bottom-right-radius: 8px
+		cursor: pointer
+
+		i
+			transform: scale(1)
+			transition: transform .1s ease-out
+
+		&:hover i
+			transform: scale(1.1)
+			transition: .1s ease-in

@@ -1,15 +1,17 @@
 a(href="#").card__content
-	header.card__head
-		img.card__img(src="http://via.placeholder.com/400x400", alt="")
-		h2.card__header Звездочка
-		p.card__text Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Однажды рыбными предложения своего точках строчка курсивных она домах?
-	
-	footer.card__footer
-		span.card__price 6 400 руб.
-		span.card__label 120х60см
-		span.card__label хлопок
 
-form.card__btn-group(action="")
-	button.card__add Добавить
-	button.card__cart
-		i(aria-hidden="true").fa.fa-shopping-cart.fa-fw
+	.card__wrapper
+		header.card__head
+			img.card__img(src="http://via.placeholder.com/400x400", alt="")
+			h2.card__header Звездочка
+			p.card__text Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Однажды рыбными предложения своего точках строчка курсивных она домах?
+		
+		footer.card__footer
+			span.card__price 6 400 руб.
+			span.card__label.card__label__value 120х60см
+			span.card__label хлопок
+
+	form.card__btn-group(action="")
+		button(onclick="alert('Пирвет!')").card__add Добавить
+		button.card__cart
+			i(aria-hidden="true").fa.fa-shopping-cart.fa-fw
