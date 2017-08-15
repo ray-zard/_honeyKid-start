@@ -4,38 +4,30 @@
 
 	position: relative
 	border-radius: 8px;
-	border: .5px solid $main-light-gray
+	border: 1px solid $main-light-gray
 	margin-bottom: 1rem
-	height: 450px
-	transition: border .2s ease-out
 
 	&:hover
-		border: 0 solid $main-light-gray
-		transition: border .1s ease-in
+		border: none
 
 	&__wrapper
-		position: relative
 		@include xy-grid
+		position: relative
 		padding: .5rem
 		background-color: $white
-		z-index: 1
 		border-radius: 8px;
+		transition: box-shadow .1s ease-out
+		z-index: 1
 
 		.card:hover &
 			box-shadow: 0px 0px 24px 0px rgba(57,90,119,0.25);
-			transition: box-shadow .1s ease-in
+			transition: box-shadow .3s ease-in
 			z-index: 1000
 
 	&__content
-		position: absolute
-		justify-content: space-between
-		height: 100%
-		transition: box-shadow .2s ease-out
-
 
 		.card:hover &
 			position: absolute
-			height: auto
 			z-index: 100
 
 
