@@ -1,7 +1,11 @@
 {
 	"logo": {
 		"src": "assets/img/logo_honey_kid.png",
-		"alt": "Логотип Honey kid"
+		"alt": "Интернет магазин мастерской детского текстиля \"Honey kid\""
+	},
+	"minLogo": {
+		"src": "assets/img/min_logo_honey_kid.png",
+		"alt": "Контакты мастерской детского текстиля \"Honey kid\""
 	},
 	"mainList": [
 		{
@@ -224,5 +228,97 @@
 			"name": "Контакты",
 			"href": "#"
 		}
-	}
+	},
+	"footerList": [
+		{
+			"headerName": "Мастерская",
+			"items": [
+				{
+					"itemName": "Каталог",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Материалы",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "О нас",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Диллерам",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Дистребютерам",
+					"itemURL": "#"
+				}
+			]
+		},
+		{
+			"headerName": "Покупателям",
+			"items": [
+				{
+					"itemName": "Доставка",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Оплата",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Отзывы",
+					"itemURL": "#"
+				},
+				{
+					"itemName": "Обратная связь",
+					"itemURL": "#"
+				}
+			]
+		},
+		{
+			"itemList": [
+				{
+					"headerName": "Наши группы",
+					"items": [
+						{
+							"itemName": "Вконтакте",
+							"itemIcon": "<i class=\"fa fa-vk fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "#"
+						},
+						{
+							"itemName": "Instagram",
+							"itemIcon": "<i class=\"fa fa-instagram fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "#"
+						},
+						{
+							"itemName": "Pinterest",
+							"itemIcon": "<i class=\"fa fa-pinterest fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "#"
+						}
+					]
+				},
+				{
+					"headerName": "Мессенджеры",
+					"items": [
+						{
+							"itemName": "WhatsApp",
+							"itemIcon": "<i class=\"fa fa-whatsapp fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "whatsapp://send?abid=[users name]&text=[message text]"
+						},
+						{
+							"itemName": "Viber",
+							"itemIcon": "<i class=\"fa fa-vimeo fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "viber://pa?chatURI=[public account URI]&text=[message text]"
+						},
+						{
+							"itemName": "Telegram",
+							"itemIcon": "<i class=\"fa fa-telegram fa-fw\" aria-hidden=\"true\"></i>",
+							"itemURL": "tg://resolve?domain=имя"
+						}
+					]
+				}
+			]
+		}
+	]
 }

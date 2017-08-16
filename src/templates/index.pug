@@ -9,13 +9,16 @@ block body
 	//- Класс ".hp" это home-page - домашняя страница
 	body.hp
 		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
-		.hp__grid.g-grid
+		.hp__grid.g-grid(itemscope="", itemtype="http://schema.org/WebPage")
 			//- Для главной страницы используется основной sidebar
 			block sidebar
 				aside.hp__sb.sb-column
-					a(href="index.html").hp__logo.logo
-						img(src=logo.src)
-					.wrap.sidebar
+
+					.hp__logo.logo(itemscope="", itemtype="http://schema.org/Organization")
+						img(src=logo.src, alt=logo.alt, title="Мастерская Honey kid", itemprop="logo").logo__img
+						a(href="/", itemprop="url").logo__href Мастерская детского текстиля Honey kid
+
+					nav.wrap.sidebar
 						include partials/sidebar-main
 
 			block content
@@ -39,9 +42,10 @@ block body
 						button.hp__filter.filter.style-elem.wrap-btn
 							include partials/filter-btn
 
-					section.hp__block-goods.block-goods.style-elem
+					section(itemtype="http://schema.org/mainContentOfPage").hp__block-goods.block-goods.style-elem
 
 						include partials/block-goods
 
 			block footer
-				.hp__m-footer.m-footer
+				footer.hp__m-footer.footer.style-elem
+					include partials/footer

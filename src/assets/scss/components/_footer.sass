@@ -1,2 +1,102 @@
-.m-footer
-	@include xy-cell(10 of 12);
+.footer
+	@include xy-cell(12)
+	@include xy-grid
+	@include xy-gutters($gutter-position: bottom)
+	padding: 1rem
+
+	&__column
+		@include xy-cell(1 of 4)
+		@include xy-grid(vertical, false)
+		justify-content: space-between
+		position: relative
+
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 1px
+			background-color: $main-light-gray
+			
+		&:last-child
+			&::after
+				display: none
+
+	&__list-header
+		@include xy-cell(12)
+		@include xy-gutters(0)
+		line-height: 1
+		margin-bottom: .5rem
+		font-size: 1.2rem
+		font-weight: bold
+		color: $main-color
+
+	&__list
+		@include xy-cell(12)
+		@include xy-grid(vertical, false)
+		flex-basis: 100%
+		justify-content: center
+
+		&.list__horisontal
+			@include xy-grid
+			justify-content: flex-start
+
+	&__item-btn
+		color: $main-gray
+		transition: .1s ease-out
+
+		&:hover
+			color: lighten($main-gray, 25%)
+			transition: .1s ease-in
+
+	
+	&__item-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 8px
+		font-size: 1.4rem
+		width: 50px
+		height: 50px
+		background-color: $main-color
+		color: $white
+		margin-right: .5rem
+
+	&__text-logo
+		align-self: flex-start
+		margin-bottom: .7rem
+
+.address-side
+	@include xy-grid(vertical)
+	align-items: flex-start
+	margin-bottom: .7rem
+
+	&:last-child
+		margin-bottom: 0
+
+	&__header
+		color: $main-gray
+		margin-bottom: 0
+
+	&__item
+		line-height: 1.2
+		color: $main-color
+		font-size: 1.4rem
+		transition: .3s ease-out
+
+		&:hover
+			color: lighten($main-color, 15%)
+			transition: .3s ease-in
+
+	&__help
+		font-size: .8rem
+		line-height: 1.2
+		color: $main-medium-gray
+		border-bottom: 1px dashed $main-medium-gray
+		transition: .3s ease-out
+
+		&:hover
+			color: darken($main-medium-gray, 10%)
+			border-bottom: 1px dashed darken($main-medium-gray, 10%)
+			transition: .3s ease-in
