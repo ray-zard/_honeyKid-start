@@ -1,7 +1,7 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 // import whatInput from 'what-input';
 
-// window.$ = $;
+window.$ = $;
 
 // import Foundation from 'foundation-sites';
 // // If you want to pick and choose which modules to include, comment out the above and uncomment
@@ -9,18 +9,19 @@
 // //import './lib/foundation-explicit-pieces';
 
 
-// $(document).foundation();
-
-
-// const maxHeightElem = document.getElementsByClassName('block-goods');
-
-// const cardList = new Array(maxHeightElem)
-
-// cardList.forEach(function(el) {
-// 	alert(el.height);
-// }, this);
-
-
-// maxHeightElem.forEach(function(i) {
-// 	alert(i);
-// });
+//E-mail Ajax Send
+$("form").submit(function() { //Change
+	var th = $(this);
+	$.ajax({
+		type: "POST",
+		url: "mail.php", //Change
+		data: th.serialize()
+	}).done(function() {
+		alert("Спасибо!");
+		setTimeout(function() {
+			// Done Functions
+			th.trigger("reset");
+		}, 1000);
+	});
+	return false;
+});

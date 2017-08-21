@@ -1,0 +1,33 @@
+extends layouts/default
+
+//- Ссылки на все возможные варианты favicon's
+block favicons
+	include partials/favicons
+
+block body
+
+	//- Класс ".hp" это home-page - домашняя страница
+	body.main-start
+		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
+		main.main-start__column(itemscope="", itemtype="http://schema.org/WebPage")
+
+			img(src=logo.src, alt=logo.alt, title="Мастерская Honey kid", itemprop="logo").main-start__img
+
+			p.main-start__header Скоро открытие!
+
+			article.main-start__block.style-elem
+
+				h1.main-start__text Интернет-магазина мастерской детского текстиля «Honey kid»
+				span.main-start__small-text Оставьте Ваш e-mail для получения информации об открытии интернет&#8209;магазина
+
+				form.main-start__form(action="")
+
+					//- Скрытая область
+					input(type="hidden", name="project_name", value="«Honey kid»")
+					input(type="hidden", name="admin_email", value="info@honeykid.ru")
+					input(type="hidden", name="form_subject", value="Форма для базы посетителей")
+					//- Скрытая область
+
+					input.main-start__input(type="email", name="e-mail", placeholder="Ваш e-mail")
+					button.main-start__form-button
+						i.fa.fa-paper-plane.fa-fw(aria-hidden="true")
