@@ -14,12 +14,11 @@ block body
 			block sidebar
 				aside.hp__sb.sb-column
 
-					.hp__logo.logo(itemscope="", itemtype="http://schema.org/Organization")
+					.hp__logo.logo#logo(itemscope="", itemtype="http://schema.org/Organization")
 						img(src=logo.src, alt=logo.alt, title="Мастерская Honey kid", itemprop="logo").logo__img
 						a(href="/", itemprop="url").logo__href Мастерская детского текстиля Honey kid
 
-					nav.wrap.sidebar
-						include partials/sidebar-main
+					include partials/sidebar-main
 
 			block content
 				main.hp__m-column.m-column
