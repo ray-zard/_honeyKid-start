@@ -31,7 +31,7 @@
 // @include foundation-media-object;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
-// @include foundation-pagination;
+@include foundation-pagination;
 // @include foundation-progress-bar;
 // @include foundation-slider;
 @include foundation-sticky;
@@ -54,6 +54,7 @@
 
 @import 'fonts';
 @import 'main-settings';
+@import 'components/pagination';
 @import 'components/main-start';
 @import 'components/wrappers';
 @import 'components/card';
