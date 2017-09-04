@@ -66,7 +66,7 @@ Triggers.init($, Foundation);
 
 // Foundation.plugin(Drilldown, 'Drilldown');
 
-// Foundation.plugin(Dropdown, 'Dropdown');
+Foundation.plugin(Dropdown, 'Dropdown');
 
 // Foundation.plugin(DropdownMenu, 'DropdownMenu');
 

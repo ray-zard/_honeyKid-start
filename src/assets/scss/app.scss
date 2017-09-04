@@ -24,7 +24,7 @@
 // @include foundation-menu;
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
-// @include foundation-dropdown;
+@include foundation-dropdown;
 // @include foundation-dropdown-menu;
 // @include foundation-responsive-embed;
 // @include foundation-label;
@@ -55,6 +55,7 @@
 @import 'fonts';
 @import 'main-settings';
 @import 'components/pagination';
+@import 'components/mini-cart';
 @import 'components/main-start';
 @import 'components/wrappers';
 @import 'components/card';
