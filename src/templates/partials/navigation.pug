@@ -1,7 +1,35 @@
 ul.nav__list.list
 	each items in navList
-		li.nav__item.list__item
-			a(href=items.href).nav__btn= items.name
+
+		if items.catalog
+			li.nav__item.list__item#catalog
+				a(href=items.href).nav__btn= items.name
+
+				nav.nav__catalog
+					ul.nav__catalog-list
+						each catalog in mainList
+							li
+								a(href=catalog.url)= catalog.name
+								each catalogSub in catalog.subList
+									
+									if catalogSub.headerName
+										ul
+											h6= catalogSub.headerName
+
+											each subitems in catalogSub.subItems
+												li
+													a(href="#")= subitems.name
+									
+									else
+										ul
+											each subitems in catalogSub.subItems
+												li
+													a(href="#")= subitems.name
+
+
+		else
+			li.nav__item.list__item
+				a(href=items.href).nav__btn= items.name
 
 ul.nav__soc-net.list
 	small.nav__small-text Мы в сообществах:
