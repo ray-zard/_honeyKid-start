@@ -1,20 +1,7 @@
-a(href="#", data-toggle="miniCartMenu").mini-cart.dropdown
+a(href="#").mini-cart__btn
 	i(aria-hidden="true").fa.fa-shopping-cart.mini-cart__icon
 	.mini-cart__indicator
 		span.mini-cart__value 2
-
-section.dropdown-pane.mini-cart__submenu#miniCartMenu(data-dropdown, data-hover="true", data-alignment="right", data-hover-pane="true")
-	a(href="#").mini-cart__item
-		img.mini-cart__head-img(src="http://via.placeholder.com/400x400", alt="")
-		article.mini-cart__item-info
-			h6.mini-cart__info-header Звездочка
-			p.mini-cart__info-label Набор мягких бортиков
-			span.mini-cart__info-price 6400 руб.
-	a(href="#").mini-cart__item
-		img.mini-cart__head-img(src="http://via.placeholder.com/400x400", alt="")
-		article.mini-cart__item-info
-			h6.mini-cart__info-header Звездочка
-			p.mini-cart__info-label Набор мягких бортиков
-			span.mini-cart__info-price 6400 руб.
-
+		
+include mini-cart
 			

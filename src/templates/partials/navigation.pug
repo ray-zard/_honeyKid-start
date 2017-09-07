@@ -5,26 +5,26 @@ ul.nav__list.list
 			li.nav__item.list__item#catalog
 				a(href=items.href).nav__btn= items.name
 
-				nav.nav__catalog
-					ul.nav__catalog-list
+				nav.nav__catalog.catalog
+					ul.catalog__list.list
 						each catalog in mainList
-							li
-								a(href=catalog.url)= catalog.name
+							li.catalog__list-item.list__item
+								a.catalog__item-header(href=catalog.url)= catalog.name
 								each catalogSub in catalog.subList
 									
 									if catalogSub.headerName
-										ul
-											h6= catalogSub.headerName
+										ul.catalog__sublist.list
+											a.catalog__item-subheader(href= catalogSub.url)= catalogSub.headerName
 
 											each subitems in catalogSub.subItems
-												li
-													a(href="#")= subitems.name
+												li.list__item
+													a.catalog__item-subelement(href= subitems.url)= subitems.name
 									
 									else
-										ul
+										ul.list
 											each subitems in catalogSub.subItems
-												li
-													a(href="#")= subitems.name
+												li.list__item
+													a.catalog__item-subitem(href="#")= subitems.name
 
 
 		else
