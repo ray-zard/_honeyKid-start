@@ -3,6 +3,16 @@
 	border-radius: 12px
 	transition: background-color .2s ease-out, color .2s ease-out .2s
 
+	&::before
+		content: ""
+		position: absolute
+		display: none
+		bottom: 0
+		left: -12px
+		width: 12px
+		height: 12px
+		background-color: $main-color
+
 	:last-child
 		margin-bottom: 0
 
@@ -11,6 +21,10 @@
 		transition: background-color .2s ease-in
 		border-bottom-right-radius: 0
 		border-bottom-left-radius: 0
+
+		&::before 
+			display: block
+
 
 		.mini-cart__btn
 			color: $white
@@ -37,7 +51,18 @@
 		&:focus
 			color: $main-color
 
-
+		&::before
+			content: ""
+			position: absolute
+			display: none
+			bottom: 0
+			left: -12px
+			width: 12px
+			height: 12px
+			background-color: #c2dcf3
+			border-bottom-right-radius: 12px
+			.mini-cart:hover &
+				display: block
 
 	&__icon
 		transform: translate3d(-1px,-1px,0);
