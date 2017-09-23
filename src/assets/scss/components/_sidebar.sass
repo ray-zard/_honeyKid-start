@@ -1,5 +1,9 @@
 .sb-column
-	@include xy-cell(2 of 12);
+	@include xy-cell(2 of 12)
+
+	@media screen and (max-width: 1300px)
+		@include xy-cell(1 of 5)
+
 
 .sidebar
 	position: relative

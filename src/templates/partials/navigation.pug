@@ -33,12 +33,26 @@ ul.nav__list.list
 
 ul.nav__soc-net.list
 	small.nav__small-text Мы в сообществах:
-	li.nav__soc-item.list__item.vk
+	li.nav__soc-item.list__item.vk.no-display
 		a(href="#").nav__soc-btn
 			i(class="fa fa-vk fa-fw" aria-hidden="true")
-	li.nav__soc-item.list__item.insta
+	li.nav__soc-item.list__item.insta.no-display
 		a(href="#").nav__soc-btn
 			i(class="fa fa-instagram fa-fw" aria-hidden="true")
-	li.nav__soc-item.list__item.pin
+	li.nav__soc-item.list__item.pin.no-display
 		a(href="#").nav__soc-btn
 			i(class="fa fa-pinterest fa-fw" aria-hidden="true")
+
+	li.nav__soc-item.list__item.no-display-ease
+		a(href="#").nav__soc-btn
+			i(aria-hidden="true").fa.fa-ellipsis-v.fa-fw 
+		ul.nav__drop-list
+			li.nav__soc-item.list__item.vk
+				a(href="#").nav__soc-btn
+					i(class="fa fa-vk fa-fw" aria-hidden="true")
+			li.nav__soc-item.list__item.insta
+				a(href="#").nav__soc-btn
+					i(class="fa fa-instagram fa-fw" aria-hidden="true")
+			li.nav__soc-item.list__item.pin
+				a(href="#").nav__soc-btn
+					i(class="fa fa-pinterest fa-fw" aria-hidden="true")
