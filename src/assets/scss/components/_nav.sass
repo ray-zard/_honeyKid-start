@@ -117,8 +117,17 @@
 		list-style-type: none
 		width: 50px
 
+	.no-display-ease
+		position: relative
+		&:hover .nav__drop-list
+			display: flex
+
 	&__drop-list
+		position: absolute
+		top: 0
+		left: 0
 		display: none
+		flex-flow: column nowrap
 
 .catalog
 	display: none

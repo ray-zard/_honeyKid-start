@@ -1,16 +1,12 @@
-.block-goods
+.product-page
 	@include xy-grid
-	@include xy-grid-layout(4, '.card');
 	padding: .5rem
 	margin-bottom: 1rem
 
-	@media screen and (max-width: 1300px)
-		@include xy-grid-layout(3, '.card');
-
-
 	&__header
+		@include xy-cell(12)
 		@include xy-gutters($gutter-position: left top right bottom)
-		@include xy-cell(100%)
+
 		color: $main-color
 		font-size: 1.6rem
 		font-weight: bold
