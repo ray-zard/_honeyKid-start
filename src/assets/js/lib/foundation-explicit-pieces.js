@@ -78,7 +78,7 @@ Foundation.plugin(Dropdown, 'Dropdown');
 
 // Foundation.plugin(OffCanvas, 'OffCanvas');
 
-// Foundation.plugin(Orbit, 'Orbit');
+Foundation.plugin(Orbit, 'Orbit');
 
 // Foundation.plugin(ResponsiveMenu, 'ResponsiveMenu');
 

@@ -1,3 +1,58 @@
-h1.product-page__header 
-	| Барокко 
-	small (Комплект для детской кроватки)
+.product-page__header
+	h1 Барокко 
+	small Комплект для детской кроватки
+
+	.product-page__description
+		//- h2.product-page__des-header Описание
+		p.product-page__des-content Комплект для детской комнаты выполненный в каноне с классической роскошью. Отлично подойдет к светской классике в интерьере, так и к минимализму столь набравшему популярность в наше время.
+		p.product-page__des-subcontent 
+			| Комплект состоит из 6 квадратных подушек (60 х 30 см) из сатина персикового цвета. На овальной кроватке с внутренним периметром 320 см.
+
+	.product-page__value
+		span #[small Цена] 10 000
+		i.fa.fa-rub.fa-fw(aria-hidden="true")
+
+	form.product-page__btn-form(metod='post')
+		button.product-page__btn(type='submit',name="ms2_action",value="cart/add")
+			i.fa.fa-shopping-cart.fa-fw(aria-hidden="true")
+			| Добавить в корзину 
+
+.product-page__presentation.presentation(role='region', aria-label='#',)
+
+	ul.presentation__container
+
+		li.is-active.presentation__slide
+			img.presentation__img(src='assets/img/product/1/8P4A6375.jpg', alt='Space')
+		li.presentation__slide
+			img.presentation__img(src='assets/img/product/1/8P4A6378.jpg', alt='Space')
+		li.presentation__slide
+			img.presentation__img(src='assets/img/product/1/8P4A6381.jpg', alt='Space')
+		li.presentation__slide
+			img.presentation__img(src='assets/img/product/1/8P4A6383.jpg', alt='Space')
+		li.presentation__slide
+			img.presentation__img(src='assets/img/product/1/8P4A6386.jpg', alt='Space')
+
+	nav.presentation__bullets.align-center(role='toolbar')
+
+		button.presentation__btn.is-active(data-slide='0') 
+			img.presentation__btn-img(src='assets/img/product/1/8P4A6375.jpg', alt='Space')
+		button.presentation__btn(data-slide='1')
+			img.presentation__btn-img(src='assets/img/product/1/8P4A6378.jpg', alt='Space')
+		button.presentation__btn(data-slide='2')
+			img.presentation__btn-img(src='assets/img/product/1/8P4A6381.jpg', alt='Space')
+		button.presentation__btn(data-slide='3')
+			img.presentation__btn-img(src='assets/img/product/1/8P4A6383.jpg', alt='Space')
+		button.presentation__btn(data-slide='4')
+			img.presentation__btn-img(src='assets/img/product/1/8P4A6386.jpg', alt='Space')
+	
+	table.presentation__table.table
+		tbody
+			tr
+				td.name Размер
+				td 6 подушек, высота 30см, длина подушки 60см. Кроватка 320см
+			tr
+				td.name Состав
+				td хлопок (сатин) / бусина (жемчуг) / синтепух (наполнитель)
+			tr
+				td.name Рекомендации по уходу
+				td ручная стрика в прохладной воде жидким моющим средством

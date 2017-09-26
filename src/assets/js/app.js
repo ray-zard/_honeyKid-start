@@ -11,6 +11,17 @@ import './lib/main-scripts';
 
 $(document).foundation();
 
+var newElem = new Foundation.Orbit($('.presentation'), {
+	// autoPlay: false,
+	animInFromLeft: 'fade-in',
+	animInFromRight: 'fade-in', 
+	animOutToLeft: 'fade-out',
+	animOutToRight: 'fade-out',
+	boxOfBullets: 'presentation__bullets',
+	containerClass: 'presentation__container',
+	slideClass: 'presentation__slide',
+});
+
 // var miniCartMenu = new Foundation.DropdownMenu(
 // 	$('#miniCart')
 // );
