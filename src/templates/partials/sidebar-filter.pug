@@ -1,0 +1,32 @@
+.wrap(data-sticky-container)
+
+	form.sidebar-filter(action="catalog/", method="post", id="mse2_filters", data-sticky, data-margin-top="0.8", data-top-anchor="logo:bottom")
+		
+		fieldset(id='mse2_ms|price').sidebar-filter__list.list.style-elem
+
+			h5.sidebar-filter__header Цена
+			.slider.disabled.sidebar-filter__slider(data-slider='', data-initial-start='0', data-initial-end='100')
+				span.slider-handle.sidebar-filter__handle(data-slider-handle='', role='slider', tabindex='1', aria-controls="sliderOutput1")
+				span.slider-fill(data-slider-fill='')
+				span.slider-handle.sidebar-filter__handle(data-slider-handle='', role='slider', tabindex='1', aria-controls="sliderOutput2")
+
+			//- .sidebar-filter__sli-val
+			//- 	| От
+			//- 	input(type="number", id="sliderOutput1")
+			//- 	| До
+			//- 	input(type="number", id="sliderOutput2")
+		
+		fieldset(id='mse2_resource|parent').sidebar-filter__list.list.style-elem
+			h5.sidebar-filter__header Категория
+
+			.sidebar-filter__input-group
+				input#checkbox1.sidebar-filter__checkbox(type='checkbox')
+				label.sidebar-filter__label(for='checkbox1') Мягкие бортики
+
+			.sidebar-filter__input-group
+				input#checkbox2.sidebar-filter__checkbox(type='checkbox')
+				label.sidebar-filter__label(for='checkbox2') Комплекты
+
+			.sidebar-filter__input-group
+				input#checkbox3.sidebar-filter__checkbox(type='checkbox')
+				label.sidebar-filter__label(for='checkbox3') Еще что-то там

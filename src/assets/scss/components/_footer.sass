@@ -6,8 +6,6 @@
 
 	&__column
 		@include xy-cell(1 of 4)
-		@include xy-grid(vertical, false)
-		justify-content: space-between
 		position: relative
 
 		&::after
@@ -27,7 +25,7 @@
 		@include xy-cell(12)
 		@include xy-gutters(0)
 		line-height: 1
-		margin-bottom: .5rem
+		margin-bottom: 1rem
 		font-size: 1.2rem
 		font-weight: bold
 		color: $main-color
@@ -37,6 +35,7 @@
 		@include xy-grid(vertical, false)
 		flex-basis: 100%
 		justify-content: center
+		margin-bottom: 1rem
 
 		&.list__horisontal
 			@include xy-grid
@@ -65,7 +64,7 @@
 
 	&__text-logo
 		align-self: flex-start
-		margin-bottom: .7rem
+		margin-bottom: .5rem
 
 .address-side
 	@include xy-grid(vertical)
@@ -82,7 +81,7 @@
 	&__item
 		line-height: 1.2
 		color: $main-color
-		font-size: 1.4rem
+		font-size: 1.2rem
 		transition: .3s ease-out
 
 		&:hover

@@ -25,9 +25,21 @@
 		&:hover
 			background-color: $main-color
 			transition: background-color .2s ease-in
+			
 			.sidebar__button
 				color: $white
 				transition: .2s ease-in
+
+		&.disable
+			.sidebar__button
+				color: $main-medium-gray
+				cursor: default
+
+				&:hover
+					&::after
+						display: block
+		&.disable 
+			background-color: $white
 
 	&__button
 		@include xy-grid

@@ -11,6 +11,40 @@
 		{
 			"name": "Мягкие бортики",
 			"url": "borders.html",
+			"disable": false,
+			"subList": [
+				{
+					"headerName": "На выписку",
+					"subItems": [
+						{
+							"name": "Элемент 2",
+							"url": "#"
+						},
+						{
+							"name": "Элемент 4",
+							"url": "#"
+						}
+					]
+				},
+				{
+					"headerName": "В коляску",
+					"subItems": [
+						{
+							"name": "Элемент 2",
+							"url": "#"
+						},
+						{
+							"name": "Элемент 4",
+							"url": "#"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Комплекты",
+			"url": "#",
+			"disable": false,
 			"subList": [
 				{
 					"subItems": [
@@ -29,6 +63,7 @@
 		{
 			"name": "Балдахины",
 			"url": "#",
+			"disable": true,
 			"subList": [
 				{
 					"subItems": [
@@ -45,26 +80,9 @@
 			]
 		},
 		{
-			"name": "Одеяла",
+			"name": "Одеяла / Пледы",
 			"url": "#",
-			"subList": [
-				{
-					"subItems": [
-						{
-							"name": "Элемент 2",
-							"url": "#"
-						},
-						{
-							"name": "Элемент 4",
-							"url": "#"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Пледы",
-			"url": "#",
+			"disable": true,
 			"subList": [
 				{
 					"subItems": [
@@ -83,6 +101,7 @@
 		{
 			"name": "Коконы",
 			"url": "#",
+			"disable": true,
 			"subList": [
 				{
 					"subItems": [
@@ -101,6 +120,7 @@
 		{
 			"name": "Конверты",
 			"url": "#",
+			"disable": true,
 			"subList": [
 				{
 					"headerName": "На выписку",
@@ -133,6 +153,7 @@
 		{
 			"name": "Игрушки",
 			"url": "#",
+			"disable": true,
 			"subList": [
 				{
 					"subItems": [
@@ -151,40 +172,9 @@
 		{
 			"name": "Декор",
 			"url": "#",
+			"disable": true,
 			"subList": [
 				{
-					"subItems": [
-						{
-							"name": "Элемент 2",
-							"url": "#"
-						},
-						{
-							"name": "Элемент 4",
-							"url": "#"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Комплекты",
-			"url": "#",
-			"subList": [
-				{
-					"headerName": "На выписку",
-					"subItems": [
-						{
-							"name": "Элемент 2",
-							"url": "#"
-						},
-						{
-							"name": "Элемент 4",
-							"url": "#"
-						}
-					]
-				},
-				{
-					"headerName": "В коляску",
 					"subItems": [
 						{
 							"name": "Элемент 2",
@@ -398,6 +388,7 @@
 		},
 		"item2": {
 			"name": "Материалы",
+			"disable": true,
 			"href": "#"
 		},
 		"item3": {

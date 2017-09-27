@@ -52,6 +52,15 @@
 			.nav__btn
 				color: $white
 				transition: .2s ease-in
+			&.disable
+				background-color: inherit
+				cursor: default
+				&::after
+					display: block
+
+		&.disable
+			.nav__btn
+				color: $main-medium-gray
 
 	&__btn
 		height: 100%

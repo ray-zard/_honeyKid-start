@@ -86,7 +86,7 @@ Foundation.plugin(Orbit, 'Orbit');
 
 // Foundation.plugin(Reveal, 'Reveal');
 
-// Foundation.plugin(Slider, 'Slider');
+Foundation.plugin(Slider, 'Slider');
 
 // Foundation.plugin(SmoothScroll, 'SmoothScroll');
 

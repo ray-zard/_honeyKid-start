@@ -1,0 +1,39 @@
+extends layouts/default
+
+//- Ссылки на все возможные варианты favicon's
+block favicons
+	include partials/favicons
+
+block body
+	//- Класс ".hp" это home-page - домашняя страница
+	body.hp
+		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
+		.hp__grid.g-grid(itemscope="", itemtype="http://schema.org/WebPage")
+			//- Для главной страницы используется основной sidebar
+			block sidebar
+				aside.hp__sb.sb-column
+
+					.hp__logo.logo#logo(itemscope="", itemtype="http://schema.org/Organization")
+						img(src=logo.src, alt=logo.alt, title="Мастерская Honey kid", itemprop="logo").logo__img
+						a(href="/", itemprop="url").logo__href Мастерская детского текстиля Honey kid
+
+					include partials/sidebar-filter
+
+			block content
+
+				main.hp__m-column.m-column
+						//- Основная навигация
+						nav.hp__nav.nav
+							.nav__wrap.style-elem
+								include partials/navigation
+							.nav__wrap-btn.mini-cart.style-elem
+								include partials/cart
+
+						section(itemtype="http://schema.org/mainContentOfPage").hp__block-goods.block-goods.style-elem
+
+							include partials/block-goods
+
+
+			block footer
+				footer.hp__m-footer.footer.style-elem
+					include partials/footer
