@@ -1,0 +1,21 @@
+.hp__main-container
+	@include xy-grid
+	padding-top: .75rem
+	margin-bottom: 1rem
+
+	h1
+		@include xy-cell(auto)
+		@include xy-gutters($gutter-position: left right bottom);
+		color: $main-color
+		font-size: 1.8rem
+		font-weight: bold
+		line-height: 1.2
+
+	h2
+		color: $main-medium-gray
+		font-size: 1.2rem
+		font-weight: bold
+		line-height: 1.2
+
+
+	

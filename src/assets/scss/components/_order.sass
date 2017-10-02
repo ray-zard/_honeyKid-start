@@ -1,0 +1,75 @@
+.order
+
+	&__val
+		@include xy-cell(6)
+		@include xy-gutters($gutter-position: left right bottom);
+		color: $main-medium-gray
+		font-size: 1.2rem
+		font-weight: bold
+		line-height: 1.2
+		text-align: right
+
+		strong
+			color: $main-pigment
+			font-size: 1.8rem
+	
+	&__count-cart
+
+	&__form
+		@include xy-grid
+		@include xy-cell(12)
+		@include xy-gutters($gutter-position: left right bottom);
+		border: 1px solid $main-light-gray
+		border-radius: 8px
+
+		button
+			@include xy-cell(12)
+			margin-bottom: 0
+			border-radius: 0 0 8px 8px
+
+
+		label
+			font-size: .8rem
+			color: $main-gray
+
+			&.order__label-wrap
+				@include xy-grid
+
+				span
+					@include xy-cell(12)
+					margin: 0
+
+
+			strong
+				color: $main-pigment
+
+		legend
+			font-size: 1.2rem
+
+	&__input
+		border-radius: 6px
+		&.textarea
+			resize: vertical
+		&.street
+			@include xy-cell(auto)
+			margin-left: 0
+			margin-right: .5rem
+		&.building,
+		&.room
+			@include xy-cell(3)
+			margin: 0
+		&.building
+			margin-right: .5rem
+
+
+	&__data-wrap
+		@include xy-cell(6)
+		border: none
+
+	&__options-wrap
+		@include xy-cell(6)
+		align-self: flex-start
+		border-radius: 6px
+		border-color: $main-medium-gray
+		background-color: $main-light-gray
+

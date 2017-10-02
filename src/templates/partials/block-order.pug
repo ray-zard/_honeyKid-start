@@ -1,0 +1,57 @@
+h1 Оформление заказа
+span.order__val
+	| Сумма: #[strong 10000]
+	i.fa.fa-ruble.fa-fw(aria-hidden="true")
+
+form.order__form.ms2_form(id="msOrder", method="post")
+
+	fieldset.fieldset.order__options-wrap
+		legend Выбор доставки
+		input(type="radio", name="delivery", value="1", id="delivery_1", data-payments="[1]", checked="")
+		label(for='checkbox12') Самовывоз
+		input(type="radio", name="delivery", value="2", id="delivery_2", data-payments="[1]")
+		label(for='checkbox22') Доставка курьером
+
+	fieldset.fieldset.order__options-wrap
+		legend Выбор оплаты
+		input(type="radio", name="payment", value="1", id="payment_1", checked="")
+		label(for='checkbox12') Оплата наличными
+
+	fieldset.fieldset.order__data-wrap
+		legend
+			| Данные получателя
+		label 
+			| Получатель (Ф.И.О) #[strong *]
+			input.order__input(type="text", id="receiver", name="receiver", value="",placeholder="Иванова Наталья Игоревна")
+		label 
+			| Телефон #[strong *]
+			input.order__input(type="tel", id="phone", name="phone", value="", placeholder="+7 (ххх) ххх-хх-хх")
+		label 
+			| Email #[strong *]
+			input.order__input(type="email", id="email", name="email", value="", placeholder="ivanova89@mail.ru")
+		label 
+			| Комментарий
+			textarea.order__input.textarea(name="comment", id="comment", placeholder="Здесь можно оставить Ваш комментарий...")
+		label 
+			| Купон на скидку
+			input.order__input(type="number", id="coupon_code", placeholder="XXXXX-XXXX-XXXX-XXXX", name="coupon_code", value="")
+
+	fieldset.fieldset.order__options-wrap
+		legend Адрес доставки
+		label 
+			| Почтовый индекс
+			input.order__input(type="text", id="index", placeholder="Почтовый индекс", name="index", value="")
+		label 
+			| Регион
+			input.order__input(type="text", id="region", placeholder="Регион", name="region", value="")
+		label 
+			| Город
+			input.order__input(type="text", id="city", placeholder="Город", name="city", value="")
+		label.order__label-wrap
+			| #[span Улица / Дом / Квартира]
+			input.order__input.street(type="text", id="street", placeholder="Улица", name="street", value="")
+			input.order__input.building(type="text", id="building", placeholder="Дом", name="building", value="")
+			input.order__input.room(type="text", id="room", placeholder="Кв.", name="room", value="")
+
+	button.button.expanded.ms2_link(type="submit", name="ms2_action", value="order/submit")
+		| Отправить

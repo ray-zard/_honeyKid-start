@@ -25,3 +25,20 @@ var newElem = new Foundation.Orbit($('.presentation'), {
 // var miniCartMenu = new Foundation.DropdownMenu(
 // 	$('#miniCart')
 // );
+
+$(document).on('hover', '#msMiniCart', function () {
+	$.ajax({
+		type: "POST",
+		url: '[[~32]]',
+		data: {
+			parent: '[[*id]]'
+		},
+		success: function (data) {
+			if (data) {
+				$('.mini-cart .ajax-data').html(data);
+			} else {
+				miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+			}
+		}
+	});
+});

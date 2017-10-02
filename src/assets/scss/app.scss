@@ -10,8 +10,8 @@
 //
 @include foundation-xy-grid-classes;
 @include foundation-typography;
-// @include foundation-button;
-// @include foundation-forms;
+@include foundation-button;
+@include foundation-forms;
 // @include foundation-range-input;
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
@@ -54,6 +54,7 @@
 
 @import 'fonts';
 @import 'main-settings';
+@import 'components/order';
 @import 'components/pagination';
 @import 'components/mini-cart';
 @import 'components/main-start';
@@ -71,4 +72,5 @@
 @import 'components/sidebar-filters';
 @import 'components/nav';
 @import 'components/footer';
+@import 'components/main-container';
 @import 'components/main-content';
