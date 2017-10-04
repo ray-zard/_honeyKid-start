@@ -3,22 +3,25 @@
 	height: 50px
 	padding: 0 0 0 12px
 
-	&__input
+	&__input[type='text']
 		border: none
-		border-bottom: 1px solid $main-light-gray
-		padding-left: .3rem
+		border-bottom: 2px solid $main-light-gray
+		padding: .3rem
+		margin: 0
+		box-shadow: none
+		font-size: 1rem
+
+		&:focus
+			&::placeholder
+				// padding-left: .3rem
+				padding-left: 0
+				opacity: 0
+				transition: opacity .2s ease-in
+				box-shadow: none
 
 		&::placeholder
 			color: $main-medium-gray
 			transition: opacity .2s ease-out
-
-		&:focus, &:active
-			// padding-left: .3rem
-
-			&::placeholder
-				padding-left: 0
-				opacity: 0
-				transition: opacity .2s ease-in
 
 	&__btn
 		display: flex

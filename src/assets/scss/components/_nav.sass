@@ -3,6 +3,9 @@
 	justify-content: space-between
 	margin-bottom: 1rem
 
+	@media screen and (max-width: 750px)
+		display: none
+
 	&__wrap
 		flex-basis: 100%
 
@@ -19,6 +22,10 @@
 		@include xy-grid(horizontal)
 		align-items: center
 		height: 50px
+
+		@media screen and (max-width: 860px)
+			height: 40px
+			
 
 	&__item
 		position: relative
@@ -105,7 +112,10 @@
 				display: none
 			&.no-display-ease
 				display: flex
-
+		
+		@media screen and (max-width: 860px)
+			height: 27px
+			width: 27px
 
 	&__soc-btn
 		display: flex
@@ -121,6 +131,7 @@
 			transition: opacity .2s ease-in .1s
 		i
 			// transform: translatey(1px)
+
 
 	&__soc-list 
 		list-style-type: none

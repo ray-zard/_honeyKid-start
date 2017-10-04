@@ -33,6 +33,7 @@ $(document).on('hover', '#msMiniCart', function () {
 		data: {
 			parent: '[[*id]]'
 		},
+		async: false,
 		success: function (data) {
 			if (data) {
 				$('.mini-cart .ajax-data').html(data);

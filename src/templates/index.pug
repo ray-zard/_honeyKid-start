@@ -9,7 +9,7 @@ block body
 	//- Класс ".hp" это home-page - домашняя страница
 	body.hp
 		//- Класс ".g-wrapper" - это глобальная обертка для всего контента на странице
-		.hp__grid.g-grid(itemscope="", itemtype="http://schema.org/WebPage")
+		.hp__grid.g-grid.off-canvas-content(itemscope, itemtype="http://schema.org/WebPage", data-off-canvas-content)
 			//- Для главной страницы используется основной sidebar
 			block sidebar
 				aside.hp__sb.sb-column
@@ -22,12 +22,17 @@ block body
 
 			block content
 				main.hp__m-column.m-column
+
 					//- Основная навигация
 					nav.hp__nav.nav
 						.nav__wrap.style-elem
 							include partials/navigation
 						.nav__wrap-btn.mini-cart.style-elem
 							include partials/cart
+
+					//- Мобильная навигация
+					include partials/mobile-navigation
+
 
 					//- Шапка основной страницы
 					header.hp__header.header.style-elem.wrap-block
@@ -48,3 +53,5 @@ block body
 			block footer
 				footer.hp__m-footer.footer.style-elem
 					include partials/footer
+
+		include partials/off-canvas-menu
